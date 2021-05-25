@@ -1,23 +1,13 @@
-# notes-app
+# my-pwa-backend
 
-## It is prerequisite to have installed nodejs and vue cli
+## It is prerequisite to have installed nodejs.
 
-## Project setup: run build.sh script in project folder
-### the script requires as the first argument the name of our domain followed by the string '/notes-app/api'. Also configure the nginx server.
-```
-./build.sh arg
-```
-### An .env file is required that stores the environment variables corresponding to the database credentials in MongoDB Atlas. The listening port on our server is 3500, which can also be specified in that file.
+### An .env file is required that stores the environment variables corresponding to the database credentials in MongoDB Atlas. Likewise, in this file it is necessary to create the SECRET variable to store the secret key with which the backend digitally signs the JSON WEB TOKEN:
 
-### Hot-reloads for development
 ```
-npm run devbabel
-```
+PORT=3500 (e.g)
+MONGODB_URI=mongodb+srv://XXXX:XXXX.4temp.mongodb.net/XXXX?retryWrites=true&w=majority
+SECRET=XXXX
 
-### Or start the local server to run the app
+// Replace 'XXXX' with the corresponding values.
 ```
-npm start
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
